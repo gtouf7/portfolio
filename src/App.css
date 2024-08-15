@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html {
+    overflow-x: hidden;
+    background-color: #222;
+}
+
+#main-container {
+    width: 60%;
+    margin: 0 auto;
+    font-family: overpass;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    height: 80vh;
+}
+.text-content {
+    padding-left: 10rem;
+    max-width: 40em;
+    max-height: 20em;
+    text-align: left;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text-content h1 {
+    color: #3795BD;
+    margin-top: 0
+}
+.text-content p {
+    font-size: 1.5em;
+    
+}
+/* scroll arrow */
+#scroll-down-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade-move-down 4s ease-in-out infinite;
+  -moz-animation:    fade-move-down 4s ease-in-out infinite;
+  animation:         fade-move-down 4s ease-in-out infinite;
+}
+
+/*animations for arrow */
+@-webkit-keyframes fade-move-down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade-move-down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade-move-down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+/* slide animation for projects section */
+#main-container, #hidden-areas {
+  transition: transform 0.4s ease-out;
+}
+
+.slide-out {
+  transform: translate(-100%);
+}
+/* hidden areas */
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 1030px) {
+  #main-img {
+    width: 400px;
+    height: 400px;
+  }
+  .text-content h1 {
+    margin-top: 0;
+  }
+  .text-content p {
+    font-size: 1.2em;
+  }
+  .text-content {
+    padding-left: 5em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #main-img {
+      width: 250px;
+      height: 250px;
+  }
+  .text-content p {
+    font-size: 1em;
+  }
+  .text-content h1 {
+    margin-top: 0;
+    font-size: 2em;
+  }
+  .text-content {
+    padding-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #main-img {
+      width: 150px;
+      height: 150px;
+  }
+  .text-content {
+    text-align: center;
+    padding: 0;
+  }
+  .text-content p {
+    font-size: 1em;
+  }
+
+  .text-content h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+}
+
+

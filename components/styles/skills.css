@@ -1,0 +1,44 @@
+#skills {
+    font-family: overpass;
+    margin-top: 5%;
+    color: #fff;
+}
+
+#skills h2 {
+    color: #fff;
+    text-align: center;
+}
+
+#skills h3 {
+    text-align: center;
+    color: #3795bd;
+}
+
+#skills-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ul {
+    list-style: square;
+}
+
+@media only screen and (max-width: 1030px) {
+    #skills-sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    ul {
+        padding: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    #skills-sections {
+        width: 50%;
+        margin: 0 auto;
+    }
+  }

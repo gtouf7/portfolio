@@ -1,0 +1,40 @@
+
+
+a {
+  font-weight: 500;
+  color: #3795bd;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #1c6787;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #3795BD;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #fff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

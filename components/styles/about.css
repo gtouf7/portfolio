@@ -1,0 +1,19 @@
+#about {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 10%;
+    font-family: overpass;
+    color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    color: #fff;
+    text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    #about {
+        margin-top: 30%;
+    }
+}
