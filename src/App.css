@@ -25,7 +25,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
     
 }
 .text-content h1 {
@@ -137,6 +137,7 @@ html {
   .text-content {
     text-align: center;
     padding: 0;
+    align-items: center;
   }
   .text-content p {
     font-size: 1em;

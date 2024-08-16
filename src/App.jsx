@@ -51,7 +51,6 @@ function Home() {
       window.removeEventListener('scroll', onScroll);
     };
   }, []);
-  
 
   return (
     <>

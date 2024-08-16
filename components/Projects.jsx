@@ -1,7 +1,7 @@
 import "./styles/projects.css"
 import Header from "./Header"
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Projects() {
     const [navigate, setNavigate] = useState(false);
@@ -15,13 +15,40 @@ export default function Projects() {
     
       }
 
+    // fetch the projects api endpoint
+    const [projects, setProjects] = useState(null);
+
+  useEffect(() => {
+    fetch('http://localhost:7777/projects')
+      .then(response => response.json())
+      .then(data => {
+        setProjects(data[0].projects);
+        //console.log(data);
+      })
+      .catch(error => {
+        console.error('Error fetching projects:', error);
+      });
+  }, []);
+
     return(
         <div id="projects">
             <Header/>
             <Link to="/" id="back-arrow" onClick={handleNavigateToHome}></Link>
             <div id="projects-section">
                 <h2>PROJECTS</h2>
-                <div className="project-item">
+                {projects ? (
+                    projects.map((project, index) => (
+                        <div className="project-item" key={index}>
+                            <a href={project.repo} target="_blank" rel="noopener noreferrer"><h3>{project.name}</h3></a>
+                            <p>{project.description}</p>
+                        </div>
+                    ))
+                ) : (
+                    <p>Loading projects...</p>
+                )}
+            </div>
+            {/* hardcoded projects for set up purposes- commented out */}
+                {/*<div className="project-item">
                     <a href="https://github.com/gtouf7/sportsNweather.git"><h3>Sports N Weather</h3></a>
                     <p>A web application developed using Node.js and Pug as the engine
                     template. This application integrates four REST APIs to provide
@@ -47,7 +74,7 @@ export default function Projects() {
                     Built with: HTML, CSS, JavaScript. 
                     </p>
                 </div>
-            </div>
+            </div>*/}
         </div>
     );
 }
