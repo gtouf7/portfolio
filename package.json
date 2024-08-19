@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build": "babel src -d lib",
+    "build": "react-scripts build"
     "test": "jest"
   },
   "dependencies": {
