@@ -6,7 +6,7 @@ export default function Skills() {
   const [skills, setSkills] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:7777/skills')
+    fetch('gt-portfolio-b.vercel.app/api/skills')
       .then(response => response.json())
       .then(data => {
         setSkills(data[0].skills);
