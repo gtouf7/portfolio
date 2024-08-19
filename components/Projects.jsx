@@ -19,7 +19,7 @@ export default function Projects() {
     const [projects, setProjects] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:7777/projects')
+    fetch('gt-portfolio-b.vercel.app/api/projects')
       .then(response => response.json())
       .then(data => {
         setProjects(data[0].projects);
