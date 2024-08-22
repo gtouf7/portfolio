@@ -21,6 +21,10 @@
     flex-wrap: wrap;
 }
 
+#skills-sections {
+    text-align: center;
+}
+
 ul {
     list-style: square;
 }
