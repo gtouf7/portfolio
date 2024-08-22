@@ -61,7 +61,7 @@ export default function Skills() {
                 </section>
             </div>
             ) : (
-            <p style="align-text: center;">Loading skills...</p>
+            <p style={{align-text: center}}>Loading skills...</p>
             )}
         </div>
         /* hardcoded skills for setup purposes - commented out */
