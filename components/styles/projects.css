@@ -1,4 +1,4 @@
-#projects-section {
+.projects-section {
     font-family: overpass;
     width: 60%;
     margin: 0 auto;
@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-#projects-section h2 {
+.projects-section h2 {
     color: #fff;
     text-align: center;
     margin: 0 auto 3em auto;
