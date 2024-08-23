@@ -17,12 +17,14 @@ export default function Projects() {
 
     // fetch the projects api endpoint
     const [projects, setProjects] = useState(null);
+    const [designs, setDesigns] = useState(null);
 
   useEffect(() => {
     fetch('https://gt-portfolio-b.vercel.app/api/projects')
       .then(response => response.json())
       .then(data => {
         setProjects(data[0].projects);
+        setDesigns(data[0].designs);
         //console.log(data);
       })
       .catch(error => {
