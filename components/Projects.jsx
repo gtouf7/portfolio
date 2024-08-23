@@ -36,7 +36,7 @@ export default function Projects() {
         <div id="projects">
             <Header/>
             <Link to="/" id="back-arrow" onClick={handleNavigateToHome}></Link>
-            <div id="projects-section">
+            <div className="projects-section">
                 <h2>PROJECTS</h2>
                 {projects ? (
                     projects.map((project, index) => (
@@ -45,14 +45,20 @@ export default function Projects() {
                             <p>{project.description}</p>
                         </div>
                     ))
-                ) : designs ? (
+                ) : (
+                    <p>Loading projects...</p>
+                )}
+            </div>
+            <div className="projects-section">
+                <h2>DESIGNS</h2>
+                {designs ? (
                     designs.map((design, index) => (
                         <div className="project-item" key={index}>
                              <a href={design.link} target="_blank" rel="noopener noreferrer"><h3>{design.name}</h3></a> 
                              <p>{design.description}</p>
                         </div>
                     ))
-               ) : (
+                ) : (
                     <p>Loading projects...</p>
                 )}
             </div>
