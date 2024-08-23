@@ -143,6 +143,10 @@ html {
     font-size: 1em;
   }
 
+   #scroll-down-arrow {
+       left: 47%;
+   }
+
   .text-content h1 {
     font-size: 1.5em;
     text-align: center;
