@@ -43,7 +43,7 @@ export default function Projects() {
                             <p>{project.description}</p>
                         </div>
                     ))
-                ) : (
+                ) : designs ? (
                     designs.map((design, index) => (
                         <div className="project-item" key={index}>
                              <a href={design.link} target="_blank" rel="noopener noreferrer"><h3>{design.name}</h3></a> 
