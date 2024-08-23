@@ -49,6 +49,7 @@ export default function Projects() {
                              <a href={design.link} target="_blank" rel="noopener noreferrer"><h3>{design.name}</h3></a> 
                              <p>{design.description}</p>
                         </div>
+                    ))
                ) : (
                     <p>Loading projects...</p>
                 )}
