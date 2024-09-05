@@ -3,7 +3,7 @@
 
 html {
     overflow-x: hidden;
-    background-color: #222;
+    background: linear-gradient(to bottom, #000000, #666666);;
 }
 
 #main-container {
