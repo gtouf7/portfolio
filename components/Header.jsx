@@ -28,8 +28,8 @@ export default function Header() {
                     <h2 className="logo-top" onClick={handleLogoClick}>GT</h2><h2 id="underscore" className="logo-top">_</h2>
                     <div id="socials">
                         <a href="https://github.com/gtouf7" target="_blank" rel="noopener noreferrer"><img id="ghLogo" src="/img/socials/gh-fff.svg" alt="Github logo"></img></a>
-                        <a href="https://www.linkedin.com/in/georgiostoufexis7/" target="_blank" rel="noopener noreferrer"><img id="liLogo" src="/img/socials/li-fff.svg" alt="LinkedIn logo"></img></a>
-                        <a href="https://www.instagram.com/gtouf7" target="_blank" rel="noopener noreferrer"><img id="igLogo" src="/img/socials/ig-fff.svg" alt="Instagram logo"></img></a>
+                        <a href="https://www.linkedin.com/in/georgiostoufexis7/" target="_blank" rel="noopener noreferrer"><img id="liLogo" className="socials-img" src="/img/socials/li-fff.svg" alt="LinkedIn logo"></img></a>
+                        <a href="https://www.instagram.com/gtouf7" target="_blank" rel="noopener noreferrer"><img id="igLogo" className="socials-img" src="/img/socials/ig-fff.svg" alt="Instagram logo"></img></a>
                     </div>
                 </div>
             </>

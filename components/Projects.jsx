@@ -20,7 +20,7 @@ export default function Projects() {
     const [designs, setDesigns] = useState(null);
 
   useEffect(() => {
-    fetch('https://gt-portfolio-b.vercel.app/api/projects')
+    fetch(`${import.meta.env.VITE_APP_URL}/api/projects`)
       .then(response => response.json())
       .then(data => {
         setProjects(data[0].projects);
@@ -35,61 +35,46 @@ export default function Projects() {
     return(
         <div id="projects">
             <Header/>
-            <Link to="/" id="back-arrow" onClick={handleNavigateToHome}></Link>
+            <Link to="/" id="back-arrow"></Link>
             <div className="projects-section">
-                <h2>PROJECTS</h2>
+                <div id="sideBar">
+                    <h2>PROJECTS</h2>
+                </div>
+                <div id="line"></div>
+                <div id="projectBar">
                 {projects ? (
                     projects.map((project, index) => (
                         <div className="project-item" key={index}>
-                            <a href={project.repo} target="_blank" rel="noopener noreferrer"><h3>{project.name}</h3></a>
-                            <p>{project.description}</p>
+                            <div className="project-info">
+                                <div>
+                                    <h3>{project.name}</h3>
+                                    <p>{project.description}</p>
+                                    <span className="links"><a href={project.repo} target="_blank" rel="noopener noreferrer"><img className="link-icon" src="./img/link.png" alt="Link icon"></img> Repository</a></span>
+                            {project.url && (<span className="links"><a href={project.url} target="_blank" rel="noopener noreferrer"><img class="link-icon" src="./img/website.png" alt="Link icon"></img> Live Site</a></span>)}
+                                </div>
+                                {project.img && <img className={project.styles} src={`/img/projects/${project.img}`} alt="Website screenshot"></img>}
+                            </div>
                         </div>
                     ))
                 ) : (
                     <p>Loading projects...</p>
                 )}
+                </div>
             </div>
             <div className="projects-section">
                 <h2>DESIGNS</h2>
                 {designs ? (
                     designs.map((design, index) => (
                         <div className="project-item" key={index}>
-                             <a href={design.link} target="_blank" rel="noopener noreferrer"><h3>{design.name}</h3></a> 
+                             <h3>{design.name}</h3>
                              <p>{design.description}</p>
+                             <a href={design.link} target="_blank" rel="noopener noreferrer"><img className="link-icon" src="./img/link.png" alt="link icon"></img> Figma Link</a>
                         </div>
                     ))
                 ) : (
-                    <p>Loading projects...</p>
+                    <p>Loading designs...</p>
                 )}
             </div>
-            {/* hardcoded projects for set up purposes- commented out */}
-                {/*<div className="project-item">
-                    <a href="https://github.com/gtouf7/sportsNweather.git"><h3>Sports N Weather</h3></a>
-                    <p>A web application developed using Node.js and Pug as the engine
-                    template. This application integrates four REST APIs to provide
-                    data on soccer leagues in various countries and current weather
-                    conditions.
-                    </p>
-                </div>
-                <div className="project-item">
-                    <a href="https://github.com/gtouf7/FutPal.git"><h3>FütPal</h3></a>
-                    <p>A web application that is used by a soccer team captain to assign team members and count numbers/players missing etc. for an upcoming soccer game.
-                    Technologies used: HTML, CSS and JavaScript.
-                    </p>
-                </div>
-                <div className="project-item">
-                    <a href="https://github.com/gtouf7/links-tab.git"><h3>LinksTab</h3></a>
-                    <p>A mobile-focused application that is used to store personal social media profiles and other multiple links.
-                    Technologies used: HTML, CSS, JavaScript including jQuery. 
-                    </p>
-                </div>
-                <div className="project-item">
-                    <a href="https://github.com/gtouf7/dramaball.git"><h3>Dramaball</h3></a>
-                    <p>A Useless Web inspired website that allows the user to click on a random soccer team and watch a funny video pop-up.
-                    Built with: HTML, CSS, JavaScript. 
-                    </p>
-                </div>
-            </div>*/}
         </div>
     );
 }

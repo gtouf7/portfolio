@@ -28,14 +28,20 @@
     margin-left: auto;
 }
 
-#socials img {
+.socials-img {
     width: 50px;
     height: 50px;
+}
+
+#ghLogo {
+    width: 44px;
+    height: 44px;
 }
 #socials {
     margin-left: auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1em;
 }
 

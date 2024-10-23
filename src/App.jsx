@@ -58,7 +58,7 @@ function Home() {
       <div id="main-container" className={navigate ? 'slide-out': ''}>
         <img id="main-img" src="/img/IMAGE.png" alt="A photo of Georgios on his laptop."></img>
         <div className="text-content">
-          <h1>Hey! I'm Georgios Toufexis.</h1>
+          <h1>Hello! I'm Georgios Toufexis.</h1>
           <p>Turning your vision into reality through digital lens!
             I build exceptional websites designed to fit your specific needs.
             Let's bring your online presence to life.</p>
