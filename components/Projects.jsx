@@ -37,11 +37,11 @@ export default function Projects() {
             <Header/>
             <Link to="/" id="back-arrow"></Link>
             <div className="projects-section">
-                <div id="sideBar">
+                <div className="sideBar">
                     <h2>PROJECTS</h2>
                 </div>
-                <div id="line"></div>
-                <div id="projectBar">
+                <div className="line"></div>
+                <div className="projectBar">
                 {projects ? (
                     projects.map((project, index) => (
                         <div className="project-item" key={index}>
@@ -62,18 +62,28 @@ export default function Projects() {
                 </div>
             </div>
             <div className="projects-section">
-                <h2>DESIGNS</h2>
+                <div className="sideBar">
+                    <h2 id="designH">DESIGNS</h2>
+                </div>
+                <div className="line"></div>
+                <div className="projectBar">
                 {designs ? (
                     designs.map((design, index) => (
                         <div className="project-item" key={index}>
-                             <h3>{design.name}</h3>
-                             <p>{design.description}</p>
-                             <a href={design.link} target="_blank" rel="noopener noreferrer"><img className="link-icon" src="./img/link.png" alt="link icon"></img> Figma Link</a>
+                            <div className="project-info">
+                                <div>
+                                    <h3>{design.name}</h3>
+                                    <p>{design.description}</p>
+                                    <span className="links"><a href={design.link} target="_blank" rel="noopener noreferrer"><img className="link-icon" src="./img/link.png" alt="link icon"></img> Figma Link</a></span>
+                                </div>
+                                {design.img && <img className={design.styles} src={`/img/projects/${design.img}`} alt="Website screenshot"></img>}
+                            </div>
                         </div>
                     ))
                 ) : (
                     <p>Loading designs...</p>
                 )}
+                </div>
             </div>
         </div>
     );

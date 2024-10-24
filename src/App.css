@@ -7,7 +7,7 @@ html {
 }
 
 #main-container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     font-family: open sans;
     display: flex;
@@ -25,7 +25,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items:flex-start;
-    
+    animation: fadeInOut 2s ease-in;
 }
 .text-content h1 {
     color: #3795BD;
@@ -34,6 +34,11 @@ html {
 .text-content p {
     font-size: 1.5em;
     
+}
+
+#main-img {
+  height: 100vh;
+
 }
 /* scroll arrow */
 #scroll-down-arrow {
@@ -90,6 +95,42 @@ html {
     display: none;
 }
 
+/* name nimation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* button*/
+#main-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #0056b3, #008cff);
+  box-shadow: 0px 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* responsiveness*/
 @media only screen and (max-width: 1230px) {
   #main-img {
     width: 400px;
