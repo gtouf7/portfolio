@@ -2,7 +2,7 @@ import "./styles/skills.css";
 import { useState, useEffect } from 'react';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { RotatingLines } from "react-loader-spinner";
+import { RotatingLines } from "react-loader-spinner"
 
 export default function Skills() {
    // fetch the skills api endpoint
