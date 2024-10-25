@@ -11,7 +11,7 @@
 
 #skills h3 {
     text-align: center;
-    color: #3795bd;
+    color: var(--blue);
 }
 
 #skills-sections {

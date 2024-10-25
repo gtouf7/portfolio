@@ -1,12 +1,14 @@
-
+:root {
+  --blue: #007bff;
+}
 
 a {
   font-weight: 500;
-  color: #3795bd;
+  color: var(--blue);
   text-decoration: inherit;
 }
 a:hover {
-  color: #1c6787;
+  color: #1554ca;
 }
 
 body {

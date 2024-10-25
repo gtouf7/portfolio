@@ -33,6 +33,17 @@
     height: 50px;
 }
 
+.socials-img:hover {
+    border-bottom: var(--blue) solid 5px;
+    border-radius: 10px;
+    background-color: #111111;
+}
+#ghLogo:hover {
+    border-bottom: var(--blue) solid 5px;
+    border-radius: 10px;
+    background-color: #111111;
+    padding: 3px;
+}
 #ghLogo {
     width: 44px;
     height: 44px;
@@ -47,7 +58,7 @@
 
 .nav-item:hover {
     cursor: pointer;
-    color: #3795BD;
+    color: var(--blue);
 }
 /* logo */
 #bracket-top {
@@ -56,7 +67,7 @@
 }
 .logo-top { 
     padding-left: 1%;
-    color: #3795BD;
+    color: var(--blue);
     font-size: 4rem;
     font-weight: 600;
     cursor: pointer;
