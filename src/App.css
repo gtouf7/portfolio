@@ -36,9 +36,7 @@ html {
     
 }
 
-#main-img {
-  height: 100vh;
-}
+
 /* scroll arrow */
 #scroll-down-arrow {
   position: absolute;
@@ -131,10 +129,7 @@ button:active {
 
 /* responsiveness*/
 @media only screen and (max-width: 1300px) {
-  #main-img {
-    width: 100vw;
-    height: 100vh;
-  }
+  
   .text-content h1 {
     margin-top: 0;
   }
@@ -142,16 +137,13 @@ button:active {
     font-size: 1.2em;
   }
   .text-content {
-    width: 50em;
+    width: fit-content;
+    margin-left: 3em;
     padding: 0;
   }
 }
 
 @media only screen and (max-width: 1230px) {
-  #main-img {
-    width: 100vw;
-    height: 100vh;
-  }
   .text-content h1 {
     margin-top: 0;
   }
@@ -160,24 +152,23 @@ button:active {
   }
   .text-content {
     padding:0;
-    width: 30em;
+    width: fit-content;
+    margin-left: 3em;;
   }
 }
 
 @media only screen and (max-width: 1150px) {
-  #main-img {
-    width: 100vw;
-    height: 100vh;
-  }
   .text-content h1 {
     margin-top: 0;
+    font-size: 2.4em;
   }
   .text-content p {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .text-content {
     padding:0;
-    width: 30em;
+    width: fit-content;
+    margin-left: 3em;
   }
 }
 
@@ -185,25 +176,26 @@ button:active {
   #main-container {
     display: flex;
     flex-direction: row;
-    gap: 5em;
+    gap: 2em;
   }
   .text-content {
     display: flex;
     flex-direction: column;
+    width: fit-content;
   }
   #main-img {
-    max-width: 400px;
-    max-height: 500px;
-    margin-bottom: 6em;
+    max-width: 250px;
+    max-height: 250px;
   }
   .text-content h1 {
     margin-top: 0;
+    font-size: 1em;;
   }
   .text-content p {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .text-content h1 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   #main-btn {
     padding: 10px 25px;
@@ -213,21 +205,16 @@ button:active {
 }
 
 @media only screen and (max-width: 800px) {
-  #main-img {
-      width: 100vw;
-      height: 100vh;
-  }
   .text-content p {
     font-size: 1em;
   }
   .text-content h1 {
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.6em;
   }
   .text-content {
     padding:0;
-      width: fit-content;
-      text-align: center;
+    width: fit-content;
   }
   #main-btn {
     padding: 10px 25px;
@@ -241,10 +228,9 @@ button:active {
 
 @media only screen and (max-width: 640px) {
   #main-img {
-      width: 400px;
-      height: 500px;
+      width: 180px;
+      height: 180px;
       margin: 0;  
-      display: none;
   }
   .text-content p {
     font-size: 1em;
@@ -255,7 +241,9 @@ button:active {
   }
   .text-content {
     align-items: center;
-    justify-content: end;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
   }
   #main-btn {
     padding: 10px 25px;
@@ -265,7 +253,6 @@ button:active {
   #main-container {
     gap: 0;
     flex-direction: column;
-    margin-top: 20%;
   }
 }
 
@@ -278,10 +265,9 @@ button:active {
     padding-left: 1em;
   }
   #main-img {
-      width: 300px;
-      height: 300px;
+      width: 150px;
+      height: 150px;
       margin: 0;
-      display: none;
   }
   .text-content {
     text-align: center;
@@ -315,8 +301,8 @@ button:active {
     margin-left: 1em;
   }
   #main-img {
-      width: 200px;
-      height: 200px;
+      width: 120px;
+      height: 120px;
       margin: 0;
   }
   .text-content {
@@ -324,10 +310,10 @@ button:active {
     padding: 0;
     align-items: center;
     margin-bottom: 1em;
-    width: 150px;
+    width: fit-content;
   }
   .text-content p {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
    #scroll-down-arrow {
@@ -335,7 +321,7 @@ button:active {
    }
 
   .text-content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 0;
