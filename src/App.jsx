@@ -7,6 +7,7 @@ import About from '/components/About'
 import Skills from '/components/Skills'
 import Footer from '/components/Footer'
 
+
 import './App.css'
 
 function Home() {
@@ -56,9 +57,9 @@ function Home() {
     <>
       <Header />
       <div id="main-container" className={navigate ? 'slide-out': ''}>
-        <img id="main-img" src="/img/IMAGE.png" alt="A photo of Georgios on his laptop."></img>
+        <img id="main-img" src="/img/toufimg.PNG" alt="A photo of Georgios on his laptop."></img>
         <div className="text-content">
-          <h1>Hey! I'm Georgios Toufexis.</h1>
+          <h1 id="name">Hello! I'm Georgios Toufexis.</h1>
           <p>Turning your vision into reality through digital lens!
             I build exceptional websites designed to fit your specific needs.
             Let's bring your online presence to life.</p>

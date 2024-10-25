@@ -1,5 +1,5 @@
 #skills {
-    font-family: overpass;
+    font-family: open sans;
     margin-top: 5%;
     color: #fff;
 }
@@ -11,7 +11,7 @@
 
 #skills h3 {
     text-align: center;
-    color: #3795bd;
+    color: var(--blue);
 }
 
 #skills-sections {
@@ -46,4 +46,4 @@ ul {
         width: 50%;
         margin: 0 auto;
     }
-  }
+}
