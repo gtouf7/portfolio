@@ -20,7 +20,7 @@ export default function Projects() {
     const [designs, setDesigns] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_APP_URL}/api/projects`)
+    fetch(`gt-portfolio-b.vercel.app/api/projects`)
       .then(response => response.json())
       .then(data => {
         setProjects(data[0].projects);
