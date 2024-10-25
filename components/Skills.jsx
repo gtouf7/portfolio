@@ -7,7 +7,7 @@ export default function Skills() {
    // fetch the skills api endpoint
   const [skills, setSkills] = useState(null);
   useEffect(() => {
-    fetch('gt-portfolio-b.vercel.app/api/skills')
+    fetch('https://gt-portfolio-b.vercel.app/api/skills')
       .then(response => response.json())
       .then(data => {
         setSkills(data[0].skills);
