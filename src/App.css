@@ -278,6 +278,7 @@ button:active {
       width: 300px;
       height: 300px;
       margin: 0;
+      display: none;
   }
   .text-content {
     text-align: center;
