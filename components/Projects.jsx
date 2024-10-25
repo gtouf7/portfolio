@@ -2,6 +2,7 @@ import "./styles/projects.css"
 import Header from "./Header"
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { RotatingLines } from "react-loader-spinner";
 
 export default function Projects() {
     const [navigate, setNavigate] = useState(false);
@@ -57,7 +58,13 @@ export default function Projects() {
                         </div>
                     ))
                 ) : (
-                    <p>Loading projects...</p>
+                    <RotatingLines
+                        strokeColor="#007bff"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="70"
+                        visible={true}
+                    />
                 )}
                 </div>
             </div>
@@ -81,7 +88,13 @@ export default function Projects() {
                         </div>
                     ))
                 ) : (
-                    <p>Loading designs...</p>
+                    <RotatingLines
+                        strokeColor="#007bff"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="70"
+                        visible={true}
+                    />
                 )}
                 </div>
             </div>

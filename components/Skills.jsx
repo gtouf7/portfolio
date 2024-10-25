@@ -2,7 +2,7 @@ import "./styles/skills.css";
 import { useState, useEffect } from 'react';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import { RotatingLines } from "react-loader-spinner";
 
 export default function Skills() {
    // fetch the skills api endpoint
@@ -18,34 +18,6 @@ export default function Skills() {
         console.error('Error fetching skills:', error);
       });
   }, []);
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,  // Corrected this to slidesToShow
-    slidesToScroll: 1,  // Corrected this to slidesToScroll
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   
   
     return (
@@ -92,7 +64,15 @@ export default function Skills() {
                 </section>
             </div>
             ) : (
-            <p>Loading skills...</p>
+              <div className="loading">
+                <RotatingLines
+                strokeColor="#007bff"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="70"
+                visible={true}
+                />
+              </div>
             )}
         </div>
     );

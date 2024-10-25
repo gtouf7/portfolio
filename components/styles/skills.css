@@ -24,7 +24,10 @@
 #skills p {
     text-align: center;
 }
-
+.loading {
+    width: 70px;
+    margin: 0 auto;
+}
 ul {
     list-style: square;
 }
