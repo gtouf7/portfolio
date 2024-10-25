@@ -2,6 +2,7 @@ import "./styles/skills.css";
 import { useState, useEffect } from 'react';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { RotatingLines } from "react-loader-spinner"
 
 export default function Skills() {
    // fetch the skills api endpoint
@@ -63,7 +64,15 @@ export default function Skills() {
                 </section>
             </div>
             ) : (
-            <p>Loading skills...</p>
+              <div className="loading">
+                <RotatingLines
+                strokeColor="#007bff"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="70"
+                visible={true}
+                />
+              </div>
             )}
         </div>
     );
