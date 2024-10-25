@@ -226,6 +226,8 @@ button:active {
   }
   .text-content {
     padding:0;
+      width: fit-content;
+      text-align: center;
   }
   #main-btn {
     padding: 10px 25px;
