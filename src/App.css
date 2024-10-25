@@ -242,6 +242,7 @@ button:active {
       width: 400px;
       height: 500px;
       margin: 0;  
+      display: none;
   }
   .text-content p {
     font-size: 1em;
