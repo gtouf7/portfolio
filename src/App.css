@@ -263,7 +263,7 @@ button:active {
   #main-container {
     gap: 0;
     flex-direction: column;
-    align-content: center;
+    margin-top: 20%;
   }
 }
 
@@ -284,6 +284,8 @@ button:active {
   .text-content {
     text-align: center;
     padding: 0;
+      margin: 0;
+      width: fit-content;
     align-items: center;
   }
   .text-content p {
