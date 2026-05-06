@@ -64,8 +64,7 @@ export default function Projects() {
                         animationDuration="0.75"
                         width="70"
                         visible={true}
-                    /><br>
-            <h3>Coming Soon!</h3>
+                    />
                 )}
                 </div>
             </div>
@@ -95,8 +94,7 @@ export default function Projects() {
                         animationDuration="0.75"
                         width="70"
                         visible={true}
-                    /><br>
-            <h3>Coming Soon!</h3>
+                    />
                 )}
                 </div>
             </div>
