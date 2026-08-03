@@ -1,37 +1,27 @@
 import Header from '/components/Header'
-import About from '/components/About'
-import Skills from '/components/Skills'
+import Hero from '/components/Hero'
+import Marquee from '/components/Marquee'
+import Services from '/components/Services'
+import Experience from '/components/Experience'
+import AboutSkills from '/components/AboutSkills'
 import Contact from '/components/Contact'
 import Footer from '/components/Footer'
+import useReveal from './useReveal.js'
 
 import './App.css'
 
-function App() {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  }
-
+export default function App() {
+  useReveal();
   return (
     <>
       <Header />
-      <div id="main-container">
-        <img id="main-img" src="/img/IMAGE.png" alt="A photo of Georgios on his laptop."></img>
-        <div className="text-content">
-          <h1 id="name">Hello! I&apos;m George Toufexis.</h1>
-          <p>Turning your vision into reality through digital lens!
-            I build exceptional websites designed to fit your specific needs.
-            Let&apos;s bring your online presence to life.</p>
-          <button id="main-btn" onClick={scrollToContact}>Get in touch</button>
-        </div>
-      </div>
-      <div id="about-section">
-        <About />
-      </div>
-      <Skills />
+      <Hero />
+      <Marquee />
+      <Services />
+      <Experience />
+      <AboutSkills />
       <Contact />
       <Footer />
     </>
   );
 }
-
-export default App

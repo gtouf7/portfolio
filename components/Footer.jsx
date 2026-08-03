@@ -1,10 +1,10 @@
-import "./styles/footer.css"
+import './styles/footer.css'
+
 export default function Footer() {
-    const bracket = "}";
-    return(
-        <div id="footer">
-            <p>Georgios Toufexis 2024 &copy;</p>
-            <h2 id="bracket-bottom">{bracket}</h2>
-        </div>
-    );
+  return (
+    <footer id="footer">
+      <span>Georgios Toufexis © {new Date().getFullYear()}</span>
+      <span className="footer-mark">{'{ GT_ }'}</span>
+    </footer>
+  );
 }
