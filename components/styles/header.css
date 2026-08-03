@@ -1,134 +1,79 @@
-/* main header */
 #header {
-    display: flex;
-    background-color: transparent;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 5rem 0 5rem;
-    font-family: overpass;
-    top: 0;
-    position:sticky;
-    z-index: 1000;
-    max-height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 22px 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  transition: background .3s ease, box-shadow .3s ease;
 }
+
 .header-shadow {
-    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(to bottom, #000000, #222222);
+  background: rgba(0, 0, 0, .72);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .35);
 }
 
-/* navigation */
-#main-nav ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 2em;
-    color: #fff;
+.logo {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
+.logo-bracket { color: var(--blue); }
+.logo-initials { padding: 0 2px; }
+.logo-cursor { color: var(--cyan); animation: blink 1.4s step-start infinite; }
+.logo:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+
 #main-nav {
-    margin-left: auto;
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.nav-item { color: rgba(255, 255, 255, .72); }
+.nav-item:hover, .nav-item:focus-visible { color: var(--cyan); }
+
+#header-aside {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, .1);
 }
 
-.socials-img {
-    width: 50px;
-    height: 50px;
+.lang-toggle {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
+.lang-toggle:hover { border-color: var(--blue); color: var(--cyan); }
 
-.socials-img:hover {
-    border-bottom: var(--blue) solid 5px;
-    border-radius: 10px;
-    background-color: #111111;
-}
-#ghLogo:hover {
-    border-bottom: var(--blue) solid 5px;
-    border-radius: 10px;
-    background-color: #111111;
-    padding: 3px;
-}
-#ghLogo {
-    width: 44px;
-    height: 44px;
-}
-#socials {
-    margin-left: 2em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-}
-
-@media only screen and (max-width: 700px) {
-    #socials {
-        margin-left: auto;
-    }
-}
-
-.nav-item {
-    text-decoration: none;
-    color: #fff;
-}
-.nav-item:hover,
-.nav-item:focus-visible {
-    cursor: pointer;
-    color: var(--blue);
-}
-/* logo */
-#bracket-top {
-    font-size: 5em;
-    color: #fff;
-}
-.logo-top {
-    padding-left: 1%;
-    color: var(--blue);
-    font-size: 4rem;
-    font-weight: 600;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-family: inherit;
-    line-height: 1;
-}
-.logo-top:focus-visible {
-    outline: 2px solid var(--blue);
-    outline-offset: 4px;
-}
-#underscore {
-    animation: blink 1.4s step-start infinite;
-}
-
-/* animations */
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
+.social-img { width: 20px; height: 20px; display: block; opacity: .75; }
+.social-img:hover { opacity: 1; }
 
 @media only screen and (max-width: 900px) {
-    #socials img {
-        width: 30px;
-        height: 30px;
-    }
-
-    #header {
-        padding: 0 5%;
-    }
+  #header { padding: 18px 24px; gap: 16px; }
 }
-
 @media only screen and (max-width: 700px) {
-    #main-nav {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #socials img {
-        width: 30px;
-        height: 30px;
-    }
-
-    #header {
-        padding: 0 2%;
-    }
-    #socials {
-        margin-right: 0;
-    }
+  #main-nav { display: none; }
+  #header-aside { margin-left: auto; border-left: none; }
 }

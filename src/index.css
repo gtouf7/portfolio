@@ -1,14 +1,12 @@
 :root {
   --blue: #007bff;
-}
-
-a {
-  font-weight: 500;
-  color: var(--blue);
-  text-decoration: inherit;
-}
-a:hover {
-  color: #1554ca;
+  --cyan: #00d4ff;
+  --ink: #fff;
+  --muted: rgba(255, 255, 255, .62);
+  --faint: rgba(255, 255, 255, .45);
+  --line: rgba(255, 255, 255, .09);
+  --display: 'Space Grotesk', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 body {
@@ -17,13 +15,7 @@ body {
   min-height: 100vh;
 }
 
-#about,
-#skills,
-#contact {
-  scroll-margin-top: 100px;
-}
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--cyan); }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+#services, #experience, #about, #contact { scroll-margin-top: 100px; }
