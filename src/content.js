@@ -39,8 +39,8 @@ export const CONTENT = {
       { title: "Certifications", items: ["SFMC Email Specialist", "SFMC Developer"] }
     ],
     contactTitle: "Let's build something.",
-    contactLede: "Looking to bring your brand to the next digital level? Leave me a message and I will reply within a day.",
-    fName: "Your name", fEmail: "Email address", fMessage: "What are you working on?", fSend: "Send message",
+    contactLede: "Have an idea in mind but don't know where to start? Leave me a message and I will reply within a day.",
+    fName: "Your name", fEmail: "Email address", fMessage: "What are you looking for?", fSend: "Send message",
     fSending: "Sending...", fSuccess: "Message sent. I'll get back to you soon.", fError: "Something went wrong. Please email me directly at "
   },
   gr: {

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <clipPath id="c"><circle cx="128" cy="128" r="128"></circle></clipPath>
+  <g clip-path="url(#c)">
+    <rect width="256" height="256" fill="#fff"></rect>
+    <rect x="-14" y="46" width="254" height="24" fill="#007bff"></rect>
+    <rect x="52" y="4" width="30" height="460" fill="#007bff" transform="rotate(41 67 234)"></rect>
+    <circle cx="128" cy="128" r="123" fill="none" stroke="#007bff" stroke-width="10"></circle>
+  </g>
+</svg>

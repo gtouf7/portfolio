@@ -1,29 +1,36 @@
 import './styles/contact.css'
 import { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
 import { useLang } from '../src/LanguageContext.jsx'
-
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const { t } = useLang();
   const formRef = useRef(null);
   const [status, setStatus] = useState('idle');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      setStatus('error');
-      return;
-    }
-    setStatus('sending');
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY).then(
-      () => { setStatus('success'); formRef.current.reset(); },
-      () => { setStatus('error'); }
-    );
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  //console.log('submit fired'); 
+  setStatus('sending');
+  try {
+    const formData = new FormData(formRef.current);
+    const payload = {
+      from_name: formData.get('from_name'),
+      reply_to: formData.get('reply_to'),
+      message: formData.get('message'),
+    };
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error('Request failed');
+    setStatus('success');
+    formRef.current.reset();
+  } catch (err) {
+    console.error('Contact form submit error:', err);
+    setStatus('error');
+  }
+};
 
   return (
     <section id="contact" className="section block" data-reveal>
@@ -47,6 +54,7 @@ export default function Contact() {
             )}
           </div>
         </form>
+        
       </div>
     </section>
   );

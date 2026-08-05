@@ -5,9 +5,9 @@
   display: flex;
   align-items: center;
   gap: 28px;
-  max-width: 1180px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 22px 56px;
+  padding: 22px 10%;
   border-bottom: 1px solid rgba(255, 255, 255, .07);
   transition: background .3s ease, box-shadow .3s ease;
 }
